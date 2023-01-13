@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+*{
+    background-color: #020403;
+    color:#ffffff;
+    text-align: center;
+    font-family: 'Rubik', sans-serif; /*Fuente rubik*/
+}
+/*Menú*/
+nav {
+	width: 100%;
+	height: 70px;
+	top: 0;
+	z-index: 100;
+	transition: ease-in-out 0.5s;
+    
+}
+
+.nav {
+	display: flex;
+	justify-content: end;
+	height: 70px;
+	align-items: center;
+	padding: 0 230px;
+}
+
+
+.enlaces-header {
+	font-weight: 300;
+	transition: ease-in-out 0.5s;
+}
+
+.nav .enlaces-header a {
+	color: white;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.nav .enlaces-header a:hover {
+	color: aqua;
+}
+
+.hamburguer {
+	width: 80px;
+	height: 80px;
+	display: none;
+	text-align: center;
+	z-index: 100;
+	cursor: pointer;
+	transition: color 0.5s ease-in;
+}
+
+.hamburguer>i {
+	font-size: 25px;
+	line-height: 80px;
+}
+
+/*Main*/
+#photo{
+    margin: auto;
+    display: block;
+    padding-top: 10px; 
+    /*Margin auto y display block para centrar imagen en cualquier tipo de pantalla*/
+}
+
+/*Titulo*/
+h1{
+    font-size: 60px;
+}
+
+/*Subtitulos*/
+h2{
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+main h2{
+    color: #ADADAD;
+}
+
+.icon{
+    width: 60px;
+    padding: 50px;
+}
+
+/*Parrafos*/
+p{
+    font-size: 18px;
+}
+
+/*Habilidades*/
+#skill{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.d1{
+    padding: 0 0 0 310px;
+}
+
+.d2{
+    padding: 0 310px 0 0;
+}
+
+/*Tabla Experiencia*/
+#experience{
+    margin: 0 225px;
+}
+
+#experience table td{
+    padding: 10px 100px;
+}
+
+span{
+    color: #ADADAD;
+}
+
+hr{
+    color: #ADADAD;
+}
+
+/*Portafolio*/
+#portafolio{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*Contacto*/
+#contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.c1{
+    padding: 0 0 0 310px;
+}
+
+.c2{
+    padding: 0 310px 0 0;
+}
+
+/*Footer*/
+footer{
+    font-size: 15px;
+    padding: 30px;
+    color: #ADADAD;
+}
+
+/*Responsive*/
+img{
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    
+    .nav {
+		padding: 0 10px;
+	}
+	.enlaces-header {
+		position: fixed;
+		background: #020403;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		font-size: 18px;
+		justify-content: space-evenly;
+		clip-path: circle(0.0% at 100% 0);
+		z-index: 1;
+	}
+	.nav .menudos {
+		-webkit-clip-path: circle(150% at 100% 0);
+		clip-path: circle(150% at 100% 0);
+	}
+	.nav .enlaces-header a {
+		color: #fff;
+	}
+	.hamburguer {
+        margin: 0 0 0 470px;
+		display: block;
+	}
+	.hamburguer>i {
+		font-size: 25px;
+		line-height: 80px;
+		color: white;
+	}
+
+    /*Iconos habilidades*/
+    #skill{
+        display: block;
+    }
+    .d1{
+        padding: 0;
+    }
+    
+    .d2{
+        padding: 0;
+    }
+
+    /*Imagenes portafolio*/
+    #portafolio{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /*Tabla Experiencia*/
+    #experience{
+        margin: 0 120px;
+    }
+
+    #experience table td{
+        padding: 10px 30px;
+    }
+
+    /*Iconos contacto*/
+    .c1{
+        padding: 0;
+    }
+    
+    .c2{
+        padding: 0;
+    }
+}
